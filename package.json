@@ -1,12 +1,15 @@
 {
-  "name": "redux-react-todo-app",
+  "name": "redux-react-todo-app-initial",
   "version": "1.0.0",
   "description": "Todo App - This is a small app that handles todo items, an example using React & Redux.",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "expect": "23.5.0",
     "react": "16.4.2",
-    "react-dom": "16.4.2"
+    "react-dom": "16.4.2",
+    "react-redux": "5.0.7",
+    "redux": "4.0.0"
   },
   "devDependencies": {},
   "scripts": {

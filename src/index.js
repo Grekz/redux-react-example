@@ -1,26 +1,27 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import Button from "./component/Button.jsx";
-import TodoList from "./component/TodoList.jsx";
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+import Button from './component/Button.jsx'
+import TodoList from './component/TodoList.jsx'
+import VisibilityFilter from './component/VisibilityFilter.jsx'
 
 class TodoApp extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      items: []
-    };
-    this.handleClick = this.handleClick.bind(this);
-    this.itemInput = React.createRef();
+      items: ['one', 'two']
+    }
+    this.handleClick = this.handleClick.bind(this)
+    this.itemInput = React.createRef()
   }
   handleClick() {
-    let newItems = this.state.items;
-    newItems = newItems.slice();
-    const inputValue = this.itemInput.current.value;
+    let newItems = this.state.items
+    newItems = newItems.slice()
+    const inputValue = this.itemInput.current.value
     // console.log(newItems);
-    newItems.push(inputValue);
+    newItems.push(inputValue)
     this.setState({
       items: newItems
-    });
+    })
   }
   render() {
     return (
@@ -29,10 +30,11 @@ class TodoApp extends Component {
         <input type="text" ref={this.itemInput} />
         <Button onClick={this.handleClick}>Add item</Button>
         <TodoList items={this.state.items} />
+        <VisibilityFilter />
       </div>
-    );
+    )
   }
 }
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<TodoApp />, rootElement);
+const rootElement = document.getElementById('root')
+ReactDOM.render(<TodoApp />, rootElement)

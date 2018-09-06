@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
 const TodoItem = props => (
-  <li {...props}>{props.children || "default emptyitem"}</li>
-);
-export default TodoItem;
+  <li {...props}>{props.children || 'default emptyitem'}</li>
+)
+export default TodoItem
